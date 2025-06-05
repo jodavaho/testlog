@@ -6,11 +6,10 @@ A micro-crate that provides `test_log!` – a macro that prints to stderr only w
 
 ## Why?
 
-You need to debug test failures. `println!` gets captured by the test harness.
-`eprintln!` clutters production logs. Adding print statements of any kind
-pollute the logs of the _consumers_ of your library. What you want is something
-_in your library_ that only prints for _your tests_, and ideally is only shown
-during testing _on failure_.
+You need to debug test failures. It's tempting to add print statements to the
+library you're testing.  But, adding print statements of any kind pollute the
+logs of the _consumers_ of your library. What you want is something _in your
+library_ that only prints for _your tests_, and ideally is only shown _on failure_.
 
 This does exactly what you want: **debug output that only appears during
 testing of _your_ crate**, and since output from a test is captured on success,
@@ -54,8 +53,8 @@ fn test_complex_function() {
 ## How it works
 
 The `test_log!` macro checks `cfg!(test)` at compile time:
-- **In test builds**: Expands to `eprintln!(...)`
-- **In production builds**: Expands to nothing (zero runtime cost)
+- **In test builds**: Expands to `eprintln!(...)`, even still, the output is captured on successful tests, so it doesn't pollute. 
+- **In production builds**: `if false` should be compiled out in release builds.
 - **Crate-local**: Only activates when the *current* crate is in test mode
 
 That's it

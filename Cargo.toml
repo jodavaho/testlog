@@ -1,11 +1,11 @@
 [package]
 name = "testlog"
-version = "0.1.0"
+version = "0.1.2"
 edition = "2021"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Josh Vander Hook <josh@vanderhook.info>"]
 description = "A tiny macro for test-only stderr logging that activates only for the current crate"
 readme = "README.md"
-repository = "https://github.com/yourusername/testlog"
+repository = "https://github.com/jodavaho/testlog"
 license = "MIT OR Apache-2.0"
 keywords = ["testing", "debug", "logging", "macro", "stderr"]
 categories = ["development-tools::testing", "development-tools::debugging"]
