@@ -1,0 +1,17 @@
+[package]
+name = "testlog"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A tiny macro for test-only stderr logging that activates only for the current crate"
+readme = "README.md"
+repository = "https://github.com/yourusername/testlog"
+license = "MIT OR Apache-2.0"
+keywords = ["testing", "debug", "logging", "macro", "stderr"]
+categories = ["development-tools::testing", "development-tools::debugging"]
+exclude = [
+    ".gitignore",
+    "/.git",
+]
+
+[dependencies]
