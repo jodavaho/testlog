@@ -20,7 +20,7 @@ you only see the log when the test fails. Perfect!.
 Add to `Cargo.toml`:
 ```toml
 [dependencies]
-testlog = "0.1"
+testlog = "0.1.3"
 ```
 
 Use in your code:

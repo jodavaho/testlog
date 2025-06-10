@@ -1,6 +1,6 @@
 [package]
 name = "testlog"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 authors = ["Josh Vander Hook <josh@vanderhook.info>"]
 description = "A tiny macro for test-only stderr logging that activates only for the current crate"
